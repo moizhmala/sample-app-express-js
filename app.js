@@ -1,5 +1,6 @@
 /*eslint-disable no-undef, no-implicit-globals*/
 import { config } from 'dotenv';
+console.log('Step1');
 config();
 import createError from 'http-errors';
 import express, { urlencoded } from 'express';
@@ -14,6 +15,7 @@ import algoliasearch from 'algoliasearch/lite.js';
 import ArticleHelper from './helpers/article-helper.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
+console.log('Step2');
 import webhook from './routes/webhook.js';
 import push from './routes/push.js';
 import push_cm from './routes/push_cm.js'
@@ -28,7 +30,7 @@ import coffee from './routes/coffee.js';
 import brewer from './routes/brewer.js';
 import search from './routes/search.js';
 import { resolveRichText } from './resolvers/rich-text-resolver.js'
-
+console.log('Step3');
 const { raw } = BodyParser;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
